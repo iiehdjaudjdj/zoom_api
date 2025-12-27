@@ -1,0 +1,491 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+    padding: 0;
+}
+
+.zoom-api-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.zoom-api-header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 40px 40px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.zoom-api-title {
+    font-size: 32px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    letter-spacing: -0.5px;
+    transition: opacity 0.3s ease;
+}
+
+.zoom-api-title:hover {
+    opacity: 0.8;
+}
+
+.zoom-api-title i {
+    font-size: 36px;
+    transition: transform 0.3s ease;
+}
+
+.zoom-api-title:hover i {
+    transform: scale(1.1);
+}
+
+.zoom-api-content {
+    padding: 60px 40px;
+    background-color: #ffffff;
+}
+
+.zoom-api-section {
+    margin-bottom: 60px;
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+.zoom-api-section-hidden {
+    display: none;
+    opacity: 0;
+}
+
+.zoom-api-input-group {
+    margin-bottom: 24px;
+}
+
+.zoom-api-form-group {
+    margin-bottom: 24px;
+}
+
+.zoom-api-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 0.3px;
+    transition: opacity 0.3s ease;
+}
+
+.zoom-api-label:hover {
+    opacity: 0.7;
+}
+
+.zoom-api-input {
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 16px;
+    border: 1px solid #000000;
+    background-color: rgba(255, 255, 255, 1);
+    color: #000000;
+    transition: all 0.3s ease;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.zoom-api-input:focus {
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-color: #000000;
+}
+
+.zoom-api-input:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.zoom-api-button-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.zoom-api-button {
+    flex: 1;
+    min-width: 150px;
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid #000000;
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    letter-spacing: 0.3px;
+}
+
+.zoom-api-button-primary {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #000000;
+}
+
+.zoom-api-button-primary:hover:not(:disabled) {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-2px);
+}
+
+.zoom-api-button-secondary {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #000000;
+}
+
+.zoom-api-button-secondary:hover:not(:disabled) {
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+}
+
+.zoom-api-button-success {
+    background-color: #000000;
+    color: #ffffff;
+    width: 100%;
+    border-color: #000000;
+}
+
+.zoom-api-button-success:hover:not(:disabled) {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-2px);
+}
+
+.zoom-api-button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.zoom-api-button-loader {
+    display: inline-block;
+    animation: zoom-api-spin 1s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes zoom-api-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.zoom-api-section-header {
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.zoom-api-section-title {
+    font-size: 28px;
+    font-weight: 400;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    letter-spacing: -0.3px;
+    transition: opacity 0.3s ease;
+}
+
+.zoom-api-section-title:hover {
+    opacity: 0.7;
+}
+
+.zoom-api-profile-content {
+    background-color: rgba(0, 0, 0, 0.02);
+    padding: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.zoom-api-profile-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.zoom-api-profile-item:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+    padding-left: 8px;
+}
+
+.zoom-api-profile-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.zoom-api-profile-label {
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.6);
+    min-width: 150px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.zoom-api-profile-value {
+    flex: 1;
+    color: #000000;
+    font-size: 16px;
+    word-break: break-word;
+    font-weight: 400;
+}
+
+.zoom-api-meetings-content {
+    display: grid;
+    gap: 24px;
+}
+
+.zoom-api-meeting-card {
+    background-color: rgba(0, 0, 0, 0.02);
+    padding: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.zoom-api-meeting-card:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: translateY(-4px);
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.zoom-api-meeting-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.zoom-api-meeting-topic {
+    font-size: 22px;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 12px;
+    letter-spacing: -0.3px;
+    transition: opacity 0.3s ease;
+}
+
+.zoom-api-meeting-card:hover .zoom-api-meeting-topic {
+    opacity: 0.8;
+}
+
+.zoom-api-meeting-id {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 400;
+}
+
+.zoom-api-meeting-details {
+    display: grid;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.zoom-api-meeting-detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #000000;
+    transition: opacity 0.3s ease;
+}
+
+.zoom-api-meeting-detail:hover {
+    opacity: 0.7;
+}
+
+.zoom-api-meeting-detail i {
+    color: rgba(0, 0, 0, 0.5);
+    width: 20px;
+    transition: color 0.3s ease;
+}
+
+.zoom-api-meeting-detail:hover i {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.zoom-api-meeting-link {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.zoom-api-meeting-link a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    word-break: break-all;
+    transition: all 0.3s ease;
+    font-weight: 400;
+}
+
+.zoom-api-meeting-link a:hover {
+    opacity: 0.6;
+    transform: translateX(4px);
+}
+
+.zoom-api-error {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+    padding: 20px 24px;
+    font-size: 15px;
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #000000;
+    transition: all 0.3s ease;
+    animation: zoom-api-fade-in 0.4s ease;
+}
+
+@keyframes zoom-api-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.zoom-api-error i {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+.zoom-api-empty-state {
+    text-align: center;
+    padding: 60px 40px;
+    color: rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease;
+}
+
+.zoom-api-empty-state:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.zoom-api-empty-state i {
+    font-size: 48px;
+    margin-bottom: 20px;
+    display: block;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.zoom-api-empty-state:hover i {
+    opacity: 0.8;
+}
+
+.zoom-api-empty-state-text {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.zoom-api-footer {
+    background-color: rgba(0, 0, 0, 0.02);
+    padding: 32px 40px;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+}
+
+.zoom-api-footer-text {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    transition: opacity 0.3s ease;
+}
+
+.zoom-api-footer-text:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .zoom-api-container {
+        width: 100%;
+    }
+
+    .zoom-api-content {
+        padding: 40px 24px;
+    }
+
+    .zoom-api-header {
+        padding: 32px 24px;
+    }
+
+    .zoom-api-title {
+        font-size: 24px;
+    }
+
+    .zoom-api-button-group {
+        flex-direction: column;
+    }
+
+    .zoom-api-button {
+        width: 100%;
+    }
+
+    .zoom-api-profile-content {
+        padding: 24px;
+    }
+
+    .zoom-api-profile-item {
+        flex-direction: column;
+    }
+
+    .zoom-api-profile-label {
+        margin-bottom: 8px;
+    }
+
+    .zoom-api-meeting-card {
+        padding: 24px;
+    }
+
+    .zoom-api-meeting-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .zoom-api-section-title {
+        font-size: 22px;
+    }
+}
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoom API</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="zoom-api-container">
+        <div class="zoom-api-header">
+            <h1 class="zoom-api-title">
+                <i class="bi bi-camera-video"></i>
+                Zoom API
+            </h1>
+        </div>
+
+        <div class="zoom-api-content">
+            <div class="zoom-api-section">
+                <div class="zoom-api-button-group">
+                    <button 
+                        id="fetchProfileBtn" 
+                        class="zoom-api-button zoom-api-button-primary"
+                    >
+                        <span class="zoom-api-button-text">Get User Profile</span>
+                        <span class="zoom-api-button-loader" style="display: none;">
+                            <i class="bi bi-arrow-repeat"></i>
+                        </span>
+                    </button>
+                    <button 
+                        id="fetchMeetingsBtn" 
+                        class="zoom-api-button zoom-api-button-secondary"
+                    >
+                        <span class="zoom-api-button-text">List Meetings</span>
+                        <span class="zoom-api-button-loader" style="display: none;">
+                            <i class="bi bi-arrow-repeat"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="zoom-api-section">
+                <div class="zoom-api-section-header">
+                    <h2 class="zoom-api-section-title">
+                        <i class="bi bi-plus-circle"></i>
+                        Create New Meeting
+                    </h2>
+                </div>
+                <div class="zoom-api-form-group">
+                    <label for="meetingTopic" class="zoom-api-label">
+                        <i class="bi bi-chat-text"></i>
+                        Meeting Topic
+                    </label>
+                    <input 
+                        type="text" 
+                        id="meetingTopic" 
+                        class="zoom-api-input" 
+                        placeholder="Enter meeting topic"
+                    >
+                </div>
+                <div class="zoom-api-form-group">
+                    <label for="meetingDate" class="zoom-api-label">
+                        <i class="bi bi-calendar"></i>
+                        Start Date & Time
+                    </label>
+                    <input 
+                        type="datetime-local" 
+                        id="meetingDate" 
+                        class="zoom-api-input"
+                    >
+                </div>
+                <div class="zoom-api-form-group">
+                    <label for="meetingDuration" class="zoom-api-label">
+                        <i class="bi bi-clock"></i>
+                        Duration (minutes)
+                    </label>
+                    <input 
+                        type="number" 
+                        id="meetingDuration" 
+                        class="zoom-api-input" 
+                        placeholder="30"
+                        min="1"
+                        max="240"
+                    >
+                </div>
+                <button 
+                    id="createMeetingBtn" 
+                    class="zoom-api-button zoom-api-button-success"
+                >
+                    <span class="zoom-api-button-text">Create Meeting</span>
+                    <span class="zoom-api-button-loader" style="display: none;">
+                        <i class="bi bi-arrow-repeat"></i>
+                    </span>
+                </button>
+            </div>
+
+            <div id="profileSection" class="zoom-api-section zoom-api-section-hidden">
+                <div class="zoom-api-section-header">
+                    <h2 class="zoom-api-section-title">
+                        <i class="bi bi-person-circle"></i>
+                        User Profile
+                    </h2>
+                </div>
+                <div id="profileContent" class="zoom-api-profile-content"></div>
+            </div>
+
+            <div id="meetingsSection" class="zoom-api-section zoom-api-section-hidden">
+                <div class="zoom-api-section-header">
+                    <h2 class="zoom-api-section-title">
+                        <i class="bi bi-calendar-event"></i>
+                        My Meetings
+                    </h2>
+                </div>
+                <div id="meetingsContent" class="zoom-api-meetings-content"></div>
+            </div>
+
+            <div id="errorMessage" class="zoom-api-error" style="display: none;"></div>
+        </div>
+
+        <div class="zoom-api-footer">
+            <p class="zoom-api-footer-text">
+                Powered by Zoom API
+            </p>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
