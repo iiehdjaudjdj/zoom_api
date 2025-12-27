@@ -25,9 +25,9 @@ Step 1: Ensure you have a web server running. You can use XAMPP, WAMP, or any lo
 
 Step 2: Open the project folder in your web server directory. The main file is index.html located in the zoom folder.
 
-Step 3: Open your web browser and navigate to the project URL. For XAMPP, this would typically be http://localhost/moi/by group/zoom/index.html or similar depending on your server configuration.
+Step 3: Open your web browser and navigate to the project URL.
 
-Step 4: Obtain Zoom API credentials. You need to create a Zoom App in the Zoom Marketplace and generate an API Key and API Secret. These credentials are required for JWT token generation.
+Step 4: Obtain Zoom API credentials. You need to create a Zoom App in the Zoom Marketplace and generate an API Key and API Secret. 
 
 Step 5: Enter your Zoom API Key and API Secret into the input fields on the website.
 
@@ -38,26 +38,16 @@ Step 7: To create a new meeting, fill in the meeting topic, select a start date 
 Step 8: The results will be displayed below the input sections. If there are any errors, they will be shown in a red error message box.
 
 ## Screenshots Included
-
-Screenshot 1: Main interface showing the API Key and API Secret input fields and action buttons for fetching profile and listing meetings.
-
-Screenshot 2: Create meeting form showing input fields for meeting topic, start date and time, and duration with the create button.
-
-Screenshot 3: User profile display showing user ID, first name, last name, email, account type, and personal meeting ID in a clean card layout.
-
-Screenshot 4: Meetings list display showing individual meeting cards with topic, ID, start time, duration, type, and join URL links.
-
-Screenshot 5: Error message display showing how validation errors and API errors are presented to the user in a user-friendly format.
-
-Screenshot 6: Loading state showing the button spinner animation that appears during API requests to prevent multiple submissions.
+<img width="742" height="876" alt="image" src="https://github.com/user-attachments/assets/582a42dd-e8f8-40a0-9fd4-bf24ab12f5dd" />
+<img width="610" height="378" alt="image" src="https://github.com/user-attachments/assets/eb046ccc-9f35-446c-a763-758840708c0f" />
 
 ## Members Listed & Roles
 
-API & Authentication Handler: Responsible for implementing JWT token generation, Zoom API authentication, and handling API requests and responses. This includes the makeZoomRequest function and generateJWTToken function.
+API & Authentication Handler: Moises Urbano
 
-JavaScript Logic / Data Processing: Responsible for implementing the core business logic including data fetching, data processing, and DOM manipulation. This includes the fetchUserProfile, fetchMeetings, createMeeting, displayProfile, and displayMeetings functions.
+JavaScript Logic / Data Processing: Moises Urbano
 
-UI & CSS Designer: Responsible for creating the Apple-inspired user interface design, styling all components, ensuring responsive layout, and implementing loading states and animations. This includes all CSS styling and HTML structure.
+UI & CSS Designer: Tyron Aromin & Angelo Mandasig
 
-GitHub & Documentation Manager: Responsible for creating and maintaining the README documentation, managing the GitHub repository, creating branches, handling pull requests, and ensuring proper collaboration workflow.
+GitHub & Documentation Manager: John Alfred O. Ventura
 
